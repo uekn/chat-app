@@ -11,37 +11,7 @@
     </div>
 </div>
 <div class="chat-space">
-    <div class="message">
-        <div class="upper-content">
-            <div class="chat-name">
-                Kenta
-            </div>
-            <div class="comment-date">
-                2020/09/10(Thu) 20:00:00
-            </div>  
-        </div>
-        <div class="lower-content">
-            <div class="comment">
-                コンバンワ
-            </div>
-        </div>
-    </div>
-    <div class="message">
-        <div class="upper-content">
-            <div class="chat-name">
-                Kenta
-            </div>
-            <div class="comment-date">
-                2020/09/10(Thu) 20:00:00
-            </div>  
-        </div>
-        <div class="lower-content">
-            <div class="comment">
-                wani
-            </div>
-        </div>
-    </div>
-    
+    <%= render partial: 'message', collection: @messages %>
 </div>
 <%= form_with model: [@room, @message], html: {class: "chat-form"}, local: true do |f|%>
   <div class="form-input">
